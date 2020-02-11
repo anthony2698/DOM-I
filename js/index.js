@@ -61,10 +61,39 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 let topHeaders = document.querySelectorAll('h4');
 topHeaders[0].textContent = siteContent["main-content"]["features-h4"];
 topHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+topHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+topHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+topHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+topHeaders[5].textContent = siteContent["contact"]["contact-h4"];
 
-let topContent = document.querySelectorAll('.top-content p');
+let topContent = document.querySelectorAll('p');
 topContent[0].textContent = siteContent["main-content"]["features-content"];
-topContent[1].textContent = siteContent["main-content"][ "about-content"];
+topContent[1].textContent = siteContent["main-content"]["about-content"];
+topContent[2].textContent = siteContent["main-content"]["services-content"];
+topContent[3].textContent = siteContent["main-content"]["product-content"];
+topContent[4].textContent = siteContent["main-content"]["vision-content"];
+topContent[5].textContent = siteContent["contact"]["address"];
+topContent[6].textContent = siteContent["contact"]["phone"];
+topContent[7].textContent = siteContent["contact"]["email"];
 
 let middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent["footer"]["copyright"];
+
+links.forEach( (el) => el.style.color = 'green')
+
+let nav = document.querySelector('nav');
+let anotherLink = document.createElement('a');
+anotherLink.textContent = 'Login';
+anotherLink.style.color = 'green';
+let aLink = document.createElement('a');
+aLink.textContent = 'Sign Up';
+aLink.style.color = 'green';
+nav.appendChild(anotherLink);
+nav.appendChild(aLink);
+
+
+
+
